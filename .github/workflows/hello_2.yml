@@ -1,6 +1,10 @@
 name: Hello World 2
 on: 
- push:
+ workflow_dispatch:
+   inputs:
+     name:
+       description: enter name
+       
 #  schedule: 
 #    - cron: '40 * * * *'
 jobs:
@@ -8,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Text
-        run: echo "Hello World 2...."
+        run: echo "{{ Hello, inputs.name 2.... }}"
