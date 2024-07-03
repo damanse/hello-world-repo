@@ -1,9 +1,9 @@
 name: Hello World 2
 on: 
- workflow_dispatch:
+ workflow_call:
    inputs:
-     name:
-       description: enter name
+       name:
+
        
 #  schedule: 
 #    - cron: '40 * * * *'
