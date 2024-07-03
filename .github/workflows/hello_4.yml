@@ -1,0 +1,10 @@
+name: Hello World 4
+on: 
+  schedule: 
+    - cron: '57 15 3 7 *'
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Text
+        run: echo "Hello, test 4.... "
