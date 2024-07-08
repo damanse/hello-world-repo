@@ -10,7 +10,7 @@ on:
         type: string
         default: 'in 1 hour'
       name:
-        description: 'name?'
+        description: 'enter name for the workflow run?'
 concurrency:
   group: schedule${{ github.event.inputs.date }}
   cancel-in-progress: true
@@ -27,4 +27,5 @@ jobs:
           workflow: 'hello_world.yml'
           timezone: 'Europe/London' # US/Central, US/Pacific
           wait-ms: 45000
-          inputs: '{"name": "paulio"}'
+          #inputs: '{"name": "paulio"}'
+          inputs: ${{ toJson(github.event.inputs) }}
