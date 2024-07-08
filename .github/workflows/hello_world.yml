@@ -1,8 +1,7 @@
 name: Hello World
 on: 
-# push:
-schedule: 
-  - cron: '10 10 * * MON'
+  schedule: 
+    - cron: '10 10 * * MON'
 jobs:
   hello_job:
     runs-on: ubuntu-latest
