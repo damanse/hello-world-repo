@@ -1,11 +1,13 @@
 name: Hello World
 on: 
-  schedule: 
-    - cron: '0 10,11,12 * * *'
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'your name?'
 jobs:
   hello_job:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Text
-        run: echo "Hello World!"
+        run: echo "Hello World! from ${{ inputs.name }}"
     
