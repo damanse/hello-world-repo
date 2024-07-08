@@ -26,7 +26,7 @@ jobs:
           #github-token: ${{ github.token }}
           date: ${{ github.event.inputs.date }}
           workflow: 'hello_world.yml'
-          timezone: 'Europe/London' # US/Central, US/Pacific
+          timezone: 'Europe/Stockholm' # US/Central, US/Pacific
           wait-ms: 45000
           #inputs: '{"name": "paulio"}'
           inputs: ${{ toJson(github.event.inputs) }}
